@@ -1,5 +1,6 @@
 package com.mustache.bbs4.domain;
 
+import jdk.jshell.Snippet;
 import lombok.Getter;
 
 import javax.persistence.Column;
@@ -8,7 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Getter
 @Table(name = "nation_wide_hospitals")
 public class Hospital {
     @Id
