@@ -23,12 +23,9 @@ public class HospitalController {
 
 
     @GetMapping("")
-    public String list(Model model, Pageable pageable) {
+    public String list(Pageable pageable, Model model) {
         Page<Hospital> hospitals = hospitalRepository.findAll(pageable);
-        log.info("size:{}", hospitals.getSize());
         model.addAttribute("hospitals", hospitals);
-        model.addAttribute("previous", pageable.previousOrFirst().getPageNumber());
-        model.addAttribute("next", pageable.next().getPageNumber());
-        return "hospital/listHos";
+        return "hospitals/list";
     }
 }
