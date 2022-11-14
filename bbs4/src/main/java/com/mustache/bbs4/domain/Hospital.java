@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
+@Getter
 @Table(name = "nation_wide_hospitals")
 public class Hospital {
     @Id
@@ -21,6 +22,7 @@ public class Hospital {
     private String hospitalName;
     private Integer patientRoomCount;
     private Integer totalNumberOfBeds;
+    private String businessTypeName;
     private Float totalAreaSize;
 
 
