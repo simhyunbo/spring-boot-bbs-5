@@ -25,6 +25,7 @@ public class HospitalRestController {
     public ResponseEntity<HospitalResponse> get(@PathVariable Integer id) { // ResponseEntity도 DTO타입
         Optional<Hospital> hospital = hospitalRepository.findById(id); // Entity
         HospitalResponse hospitalResponse = Hospital.of(hospital.get()); // DTO
+
         return ResponseEntity.ok().body(hospitalResponse); // Return은 DTO로
     }
 }
